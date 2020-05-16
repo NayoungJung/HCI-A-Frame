@@ -7,9 +7,9 @@ function move(){
 	rocket.object3D.position.y +=  position;
 	rocket.object3D.position.z -=  position;
 
-	if (rocket.object3D.position.y>=30){
-		rocket.object3D.position.y=30;
-		rocket.object3D.position.z=-30;
+	if (rocket.object3D.position.y==35){
+		rocket.object3D.position.y=35;
+		rocket.object3D.position.z=-35;
 	}
 	else console.log(rocket.object3D.position);
 }
