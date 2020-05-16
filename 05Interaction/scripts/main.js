@@ -1,23 +1,30 @@
 
-var rotationSpeed = 0.001;
-var myOtherBox = document.getElementById('myOtherBox');
+var position = 0;
+var rocket = document.getElementById('bullet');
 
-function spin(){
-	myOtherBox.object3D.rotation.x += rotationSpeed;
-	myOtherBox.object3D.rotation.y += rotationSpeed;
-	myOtherBox.object3D.rotation.z += rotationSpeed/2;
-	console.log(myOtherBox.object3D.rotation);
+function move(){
+	boolean=false;
+	rocket.object3D.position.y +=  position;
+	rocket.object3D.position.z -=  position;
+
+	if (rocket.object3D.position.y>=30){
+		rocket.object3D.position.y=20;
+		rocket.object3D.position.z=-30;
+	}
+	else console.log(rocket.object3D.position);
 }
 
-setInterval(spin, 16);
+setInterval(move, 16);
 
 
- myOtherBox.addEventListener('mouseenter', function(){
-	rotationSpeed = 0.5;
+rocket.addEventListener('mouseenter', function(){
+	boolean=true;
+	position = 0.08;
 	console.log('mouse enter');
- });
+});
 
- myOtherBox.addEventListener('mouseleave', function(){
-	rotationSpeed = 0.001;
+rocket.addEventListener('mouseleave', function(){
+	boolean=true;
+	position = 0.08;
 	console.log('mouse leave');
- });
+});
