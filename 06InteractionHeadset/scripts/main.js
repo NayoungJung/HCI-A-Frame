@@ -25,6 +25,6 @@ rocket.addEventListener('mouseenter', function(){
 rocket.addEventListener('mouseleave', function(){
 	boolean=true;
 	position = 0.08;
-	console.log('mouse leave');
+	console.slog('mouse leave');
 });
 
