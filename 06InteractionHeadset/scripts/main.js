@@ -1,43 +1,30 @@
 
-var rotationSpeed = 0.001;
-var myOtherBox = document.getElementById('myOtherBox');
+var position = 0;
+var rocket = document.getElementById('bullet');
 
-function spin(){
-	myOtherBox.object3D.rotation.x += rotationSpeed;
-	myOtherBox.object3D.rotation.y += rotationSpeed;
-	myOtherBox.object3D.rotation.z += rotationSpeed/2;
-	//console.log(myOtherBox.object3D.rotation);
-}
-setInterval(spin, 10);
+function move(){
+	boolean=false;
+	rocket.object3D.position.y +=  position;
+	rocket.object3D.position.z -=  position;
 
-
-myOtherBox.addEventListener('mouseenter', function(){
-	rotationSpeed = 0.01;
-	console.log('entered');
-});
-
-myOtherBox.addEventListener('mouseleave', function(){
-	rotationSpeed = 0.001;
-	console.log('left');
-});
-
-
-
-
-/*
- * click-events can use a fuse (default on mobile). So the event only fires, if the cursor is on the object for a specified time. 
- */
-
- var growspeed = 1.2;
-
-function grow(){
-myOtherBox.object3D.scale.x *= growspeed;
-	myOtherBox.object3D.scale.y *= growspeed;
-myOtherBox.object3D.scale.z *= growspeed;
-console.log(myOtherBox.object3D.scale);
+	if (rocket.object3D.position.y>=35){
+		position=0;
+	}
+	else console.log(rocket.object3D.position);
 }
 
- myOtherBox.addEventListener('click', function(){ // uses a fuse
-grow();
-	console.log('grew');
- });
+setInterval(move, 16);
+
+
+rocket.addEventListener('mouseenter', function(){
+	boolean=true;
+	position = 0.08;
+	console.log('mouse enter');
+});
+
+rocket.addEventListener('mouseleave', function(){
+	boolean=true;
+	position = 0.08;
+	console.log('mouse leave');
+});
+
