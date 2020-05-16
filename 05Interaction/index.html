@@ -18,7 +18,6 @@
     <img id="p1" src="images/p1.jpg" />
     <img id="p3" src="images/p3.jpg" />
     <img id="earth" src="images/earth.jpg" />
-    <img id="eye" src="images/eye.jpg" />
   </a-assets> 
 
   <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
@@ -41,7 +40,7 @@
   <a-sphere  material="src: #p3" radius="4" position= "25.5 8 -30"  animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true" ></a-sphere>
 
   <!--EARTH-->
-  <a-sphere   color="white" material="src: #earth" radius="6"  position= "0 25 -35" animation="property: rotation;to: 0 360 0; dur: 4000; easing: linear; loop: true"
+  <a-sphere   color="white" material="src: #earth" radius="6"  position= "0 25 -35" animation="property: rotation;to: 0 -90 0; dur: 4000; easing: linear; loop: true"
   ></a-sphere>
 
   <!--cannon-->
@@ -53,7 +52,8 @@
   position="0 0 -5" rotation="-45 0 0"></a-cylinder>
 
   <!-- Basic triangle. -->
-  <a-triangle material="src: #eye"color="#000000" rotation="-45 0 0" position="0 1.55 -4.7"
+  <a-triangle
+   rotation="-45 0 0" position="0 1.55 -4.7"
   ></a-triangle>
 
   <!--bullet-->
