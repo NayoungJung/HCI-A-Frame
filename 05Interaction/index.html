@@ -10,7 +10,7 @@
 
 </head>
 <body>
-  <a-scene background="color: #000000" fog="type: linear; color: white" light="color: #AFA; intensity: 1.5" position="-1 1 0">
+  <a-scene background="color: #000000" fog="type: linear; color: white" light="color: #AFA; intensity: 3.5" position="-1 1 0">
    <a-assets>
     <img id="rock1" src="images/1T.jpg" />
     <img id="rock2" src="images/2T.jpg" />
@@ -23,7 +23,7 @@
   <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
   
   <a-light type="directional" position="0 0 0" rotation="-90 0 90" target="#directionaltarget">
-    <a-entity id="directionaltarget" position="0 0 -1"  rotation="-45 0 0"></a-entity>
+    <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
   </a-light>
 
   <!--object1-->
