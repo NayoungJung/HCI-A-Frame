@@ -10,7 +10,7 @@
 
 </head>
 <body>
-  <a-scene background="color: #000000">
+  <a-scene background="color: #000000" fog="type: linear; color: white">
    <a-assets>
     <img id="rock1" src="images/1T.jpg" />
     <img id="rock2" src="images/2T.jpg" />
@@ -21,10 +21,10 @@
   </a-assets> 
 
   <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+  
   <a-light type="directional" position="0 0 0" rotation="-90 0 90" target="#directionaltarget">
     <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
   </a-light>
-
 
   <!--object1-->
   <a-icosahedron id="star1" color="#ABABAB" radius="5" position= "-35 20 -35" material="src: #p1" animation="property: rotation; to: 0 0 360; 
@@ -40,8 +40,7 @@
   <a-sphere  material="src: #p3" radius="4" position= "25.5 8 -30"  animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true" ></a-sphere>
 
   <!--EARTH-->
-  <a-sphere   color="white" material="src: #earth" radius="6"  position= "0 25 -35" animation="property: rotation;to: 0 -90 0; dur: 4000; easing: linear; loop: true"
-  ></a-sphere>
+  <a-sphere   color="white" material="src: #earth" radius="6"  position= "0 25 -35"></a-sphere>
 
   <!--cannon-->
   <a-cylinder color="272635" 
