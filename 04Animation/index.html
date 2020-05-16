@@ -16,10 +16,8 @@
     <img id="rock2" src="images/2T.jpg" />
     <img id="land" src="images/land.jpg" />
     <img id="p1" src="images/p1.jpg" />
-    <img id="p2" src="images/p2.jpg" />
     <img id="p3" src="images/p3.jpg" />
-    <img id="moon" src="images/moon.jpg" />
-    <img id="moonN" src="images/moonN.jpg" />
+    <img id="earth" src="images/earth.jpg" />
 
     <a-scene fog="type: linear; color: #AAA"></a-scene>
 
@@ -43,11 +41,13 @@
 
   <a-sphere  material="src: #p3" radius="4" position= "25.5 8 -30"  animation="property: rotation; to: 0 360 0; dur: 4000; easing: linear; loop: true" ></a-sphere>
 
-  <!--MOON-->
-  <a-sphere  material="src: #moonN" radius="6"  rotation="0 47 0" position= "0 9 -25"></a-sphere>
+  <!--EARTH-->
+  <a-sphere  material="src: #earth" radius="6"  position= "0 9 -25"></a-sphere>
 
   <!--cannon-->
   <a-cylinder color="272635" material="side: double" open-ended="true" metalness="1 " radius="0.4" height="2" position="0 0 -3" rotation="-45 0 0"></a-cylinder>
+
+
 
   <!--title-->
   <a-entity text="value:A Trip; color:#FFFFFF; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/berkshireswash/BerkshireSwash-Regular.json;" scale="10 10 10" rotation="0 0 18" position="4 2.8 -1.2"
