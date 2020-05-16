@@ -12,10 +12,14 @@
 <body>
   <a-scene background="color: #000000">
    <a-assets>
-      <img id="rock1" src="images/1T.jpg" />
-      <img id="rock2" src="images/2T.jpg" />
+    <img id="rock1" src="images/1T.jpg" />
+    <img id="rock2" src="images/2T.jpg" />
+    <img id="land" src="images/land.jpg" />
+    <img id="p1" src="images/p1.jpg" />
+    <img id="p2" src="images/p2.jpg" />
+    <img id="p3" src="images/p3.jpg" />
 
-    </a-assets> 
+  </a-assets> 
     <!--Title
     <a-entity text="value:A Trip; color:#FFFFFF; shader: msdf; font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/berkshireswash/BerkshireSwash-Regular.json;" scale="10 10 10" rotation="0 0 18" position="4 2.8 -1.2"></a-entity>
 
@@ -26,7 +30,7 @@
   -->
 
   <!--Ground-->
-  <a-plane color="#ABABAB" height="100" width="100"rotation="-90 0 0"> </a-plane>
+  <a-plane color="#ABABAB" height="100" width="100"rotation="-90 0 0" material="src: #land"> </a-plane>
 
   <!--Rough Ground-->
   <a-cone color="#A6A6A6" radius-bottom="10" radius-top="0.5" position= "-6 0 -4"> </a-cone>
@@ -72,21 +76,21 @@
   <a-octahedron color="#FF926B" radius="0.1" position= "20 6 -20"></a-octahedron>
 
   <!--object1-->
-  <a-icosahedron color="#FF926B" radius="5" position= "-35 20 -35"></a-icosahedron>
+  <a-icosahedron color="#FF926B" radius="5" position= "-35 20 -35" material="src: #p1"></a-icosahedron>
 
   <!--object2-->
-  <a-torus color="#43A367" arc="160" radius="5" radius-tubular="0.1" rotation="0 0 160" position= "-25 20 -35"></a-torus>
+  <a-torus color="#43A367" arc="160" radius="5" radius-tubular="0.1" rotation="0 0 160" position= "-25 20 -35"  material="src: #p2"></a-torus>
 
   <!--object3-->
-  <a-ring color="A6A6A8" radius-inner="6" radius-outer="8" rotation="-45 -45 0" position= "13 8 -20"metalness="1"></a-ring>
+  <a-ring color="A6A6A8" radius-inner="6" radius-outer="8" rotation="-45 -45 0" position= "13 8 -20"   material="src: #rock1"metalness="1"></a-ring>
 
-  <a-sphere color="#D81E5B" radius="4" position= "13.5 8 -20"></a-sphere>
+  <a-sphere color="#D81E5B" radius="4" position= "13.5 8 -20"  material="src: #p3"></a-sphere>
 
   <!--mountains-->
   <a-tetrahedron color="#C6D8D3" radius="3" rotation="0 0 40" position= "-20 0 -3" shadow
-    material="src: #rock1"></a-tetrahedron>
+  material="src: #rock1"></a-tetrahedron>
   <a-tetrahedron color="#C6D8D3" radius="6" rotation="20 0 -60" position= "-20 0 -10"shadow
-    material="src: #rock2"></a-tetrahedron>
+  material="src: #rock2"></a-tetrahedron>
   <a-tetrahedron color="#C6D8D3" radius="7" rotation="0 0 40" position= "-20 0 2"  material="src: #rock1"></a-tetrahedron>
   <a-tetrahedron color="#C6D8D3" radius="5" rotation="20 0 -60" position= "-20 0 8" material="src: #rock2"></a-tetrahedron>
   
