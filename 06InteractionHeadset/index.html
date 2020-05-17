@@ -31,12 +31,11 @@
 	</a-ring>
 </a-camera>
 
-<!--<a-light type="directional" position="0 0 0" rotation="-90 0 90" target="#directionaltarget">
+<a-light type="directional" position="0 0 0" rotation="-45 0 0" target="#directionaltarget">
 	<a-entity id="directionaltarget" position="0 0 -1"></a-entity>
 </a-light>
 
-<a-entity light="type: spot; angle: 45; target:45;"></a-entity>
--->
+
 <!--object1-->
 <a-icosahedron id="star1" color="#ABABAB" radius="5" position= "-35 20 -35" material="src: #p1" animation="property: rotation; to: 0 0 360; 
 dur: 10000; easing: linear; loop: true" ></a-icosahedron>
@@ -90,7 +89,7 @@ radius-bottom="1.3" radius-top="0.6"
 
 animation__mouseenter1="
 property: object3D.position.y;
-to:30;
+to:33;
 startEvents:mouseenter;
 easing:linear;
 dur:5000;
@@ -98,7 +97,7 @@ loop:none;"
 
 animation__mouseenter2="
 property: object3D.position.z;
-to:-50;
+to:-45;
 startEvents:mouseenter;
 easing:linear;
 dur:5000;
