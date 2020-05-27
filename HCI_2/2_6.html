@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+<body>
+	<a-scene background="color: #333333">
+
+	<!--activities below-->
+	<a-plane color="#ABABAB" height="20" width="20"rotation="-90 0 0">	</a-plane>
+<a-circle color="EB5E55" radius ="1" rotation="-90 0 0"> </a-circle>
+<a-cone color="tomato" radius-bottom="2" radius-top="0.5"> </a-cone>
+		<!--activities below-->
+		<a-plane color="#ABABAB" height="20" width="20"rotation="-90 0 0">	</a-plane>
+		<a-circle color="EB5E55" radius ="1" rotation="-90 0 0" position="2 5 2"> </a-circle>
+		<a-cone color="tomato" radius-bottom="2" radius-top="0.5"> </a-cone>
+
+		<!-- Cylinders. -->
+		<a-cylinder color="yellow" theta-start="50" theta-length="280" side="double" position= "-3 3 4"></a-cylinder>
+		<a-cylinder color="green" open-ended="true" position= "-3 0 4"></a-cylinder>
+
+		<a-dodecahedron color="#FF926B" radius="1" position= "3 2 -4"></a-dodecahedron>
+
+		<a-octahedron color="#FF926B" radius="2" position= "-4 2 -4"></a-octahedron>
+
+		<a-ring color="teal" radius-inner="3" radius-outer="4" rotation="-45 0 0" position= "3 2 -4"metalness="4"></a-ring>
+
+
+		
+		<a-box id="myBox"
+		width="3"
